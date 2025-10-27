@@ -9,6 +9,10 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Register any application services.
      */
+    protected $policies = [
+        \App\Models\Chirp::class => \App\Policies\ChirpPolicy::class,
+    ];
+
     public function register(): void
     {
         //
